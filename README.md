@@ -92,7 +92,12 @@ Con `https://USUARIO.github.io/emuladorforeveryone-web/` como base:
 | Página | URL |
 | --- | --- |
 | Inicio | `.../` o `.../index.html` |
+| Offline | `.../index.html#offline` |
 | Características | `.../index.html#caracteristicas` |
+| Experiencia | `.../index.html#experiencia` |
+| Privacidad (sección) | `.../index.html#privacidad` |
+| Modelo de compra | `.../index.html#precio` |
+| Google Play | `.../index.html#google-play` |
 | Propiedad intelectual y ROMs | `.../index.html#propiedad-intelectual` |
 | Privacidad | `.../privacy.html` |
 | Términos | `.../terms.html` |
@@ -129,4 +134,63 @@ Datos y archivos que la ficha exige y que este sitio no puede inventar:
 
 ---
 
-© 2026 moralesDev · Proyecto independiente. Este sitio y la aplicación no están afiliados a Nintendo, The Pokémon Company, Game Freak ni a ningún otro titular de derechos.
+© 2026 moralesDev · Proyecto independiente. Este sitio y la aplicación no están afiliados a Nintendo ni a ningún otro titular de derechos de propiedad intelectual.
+
+---
+
+## 7. Fase offline — qué cambió (agosto 2026)
+
+La página principal se reorganizó alrededor de la propuesta de valor **jugar sin conexión**. Orden actual de `index.html`:
+
+1. **Hero** — «Tu GBA. En cualquier lugar.» + insignia «Juega sin Internet» + tres beneficios + CTAs.
+2. **Sin Internet. Sin problemas.** (`#offline`) — beneficio principal, con la aclaración de que instalar y actualizar sí requiere conexión, y cuatro escenarios: avión, metro, sin cobertura, sin datos móviles.
+3. **Características** (`#caracteristicas`) — «Juego offline» aparece primero, luego emulación, guardado local, save states, controles y experiencia Android.
+4. **Tu juego va contigo.** (`#experiencia`) — sección narrativa con cuatro situaciones (gráficos propios, ninguna marca de terceros).
+5. **Offline también significa privado.** (`#privacidad`) — cuatro afirmaciones + los bloques «Tu biblioteca. Tus partidas. Tu dispositivo.» y «Sin cuentas innecesarias.»
+6. **Compra una vez.** (`#precio`) — pago único, sin suscripciones, sin anuncios, sin compras internas.
+7. **Propiedad intelectual y ROMs** (`#propiedad-intelectual`) — cuatro tarjetas: sin afiliación, sin ROMs incluidas, sin enlaces de descarga, responsabilidad del usuario.
+8. **Google Play** (`#google-play`) — «Próximamente en Google Play», botón desactivado.
+9. **Footer** — Privacidad, Términos, Contacto y GitHub.
+
+También se actualizaron `title`, `meta description` y Open Graph hacia «emulador GBA Android», «Game Boy Advance Android» y «jugar sin Internet»; nunca hacia descargas de ROMs. Sin JavaScript, sin trackers y con una sola animación CSS (respeta `prefers-reduced-motion`).
+
+## 8. Textos que debes revisar cuando la app final esté terminada
+
+| Dónde | Texto | Por qué |
+| --- | --- | --- |
+| `index.html` → `#precio` | `$14.900 COP*` y su nota al pie | Es un precio de referencia. Cuando lo fijes en Google Play, sustitúyelo por el definitivo o por `[PRECIO POR DEFINIR]` y borra el asterisco. |
+| `index.html` → `#google-play` | `[GOOGLE_PLAY_URL]` y `aria-disabled="true"` | Poner la URL real y quitar el atributo cuando la ficha esté publicada. |
+| `index.html` → `#caracteristicas` | Comentario con `<span class="tag tag-outline">En desarrollo</span>` en cada tarjeta | Descoméntalo en las funciones aún no terminadas; bórralo cuando lo estén. |
+| `index.html` → hero | «La aplicación está en desarrollo y todavía no se ha publicado en Google Play.» | Cámbialo cuando se publique. |
+| `privacy.html` → apartado 1 | `[DATOS DEL DESARROLLADOR]` | Datos que Google Play muestre de tu cuenta personal. |
+| `privacy.html` → apartados 4 y 7 | «no recopila datos» / «no comparte datos con terceros» | Debe reflejar la versión publicada y auditada. |
+| Todas las páginas | Fecha «15 de agosto de 2026» / `2026-08-15` | Actualízala en cada cambio de contenido legal. |
+
+## 9. Afirmaciones que dependen de la implementación final
+
+Estas frases del sitio son ciertas para el diseño previsto, y hay que verificarlas contra el build que se publique. Si algo cambia, se corrige el sitio **y** la política de privacidad antes de publicar:
+
+- **«Juega sin conexión a Internet»** — vale solo para la experiencia de emulación con archivos ya presentes en el dispositivo. Instalar, comprar y actualizar mediante Google Play sí requiere conexión, y así se dice en la sección `#offline`. Si alguna función futura (verificación de licencia, sincronización, contenido remoto) necesitara red, hay que matizar esa sección.
+- **«Las ROMs no se suben a nuestros servidores»** — depende de que no exista backend. Válido mientras no se añada ninguno.
+- **«Las partidas se almacenan localmente»** — depende de que no se active copia de seguridad en la nube (incluido el backup automático de Android, que conviene revisar en el manifiesto).
+- **«Sin cuentas innecesarias»** — depende de que no se introduzca inicio de sesión.
+- **«Sin anuncios, sin suscripciones, sin compras dentro de la aplicación»** — depende del modelo definitivo en Google Play Console.
+- **«Sin SDK de analítica»** (política, apartado 7) — si se añade Firebase, Crashlytics, analítica o publicidad, hay que declararlo en la política y en el formulario de seguridad de los datos de Google Play.
+- **Etiquetas de características** — no describir como terminada ninguna función que no lo esté; para eso está la etiqueta «En desarrollo».
+
+## 10. Revisión de textos (agosto 2026)
+
+Se eliminaron todas las menciones públicas a franquicias concretas. Ahora la única marca de tercero citada es **Nintendo**, como titular de derechos de la plataforma original, y **Game Boy Advance** como nombre descriptivo de la consola. Verificado con búsqueda en todos los archivos del sitio: no quedan referencias a The Pokémon Company, Game Freak, Bandai Namco ni Toei Animation en textos visibles, `alt`, metadatos, Open Graph ni comentarios HTML.
+
+Textos modificados:
+
+- **Aviso del pie (4 páginas)** — la lista de titulares se reduce a «Nintendo ni ningún otro titular de derechos de propiedad intelectual»; el lema pasa a «Proyecto independiente de emulación para Android».
+- **Hero** — «Un emulador independiente de Game Boy Advance para Android, diseñado para llevar tus juegos y tus partidas contigo y jugar sin conexión a Internet.»
+- **`#offline`** — «Una vez instalada la aplicación y con tus juegos disponibles en el dispositivo, puedes disfrutar de tu experiencia de juego sin depender de una conexión permanente a Internet.»
+- **`#caracteristicas`** — «Guardado local» → «Partidas locales»; la emulación se describe como «tus propios juegos de Game Boy Advance desde los archivos que ya tienes».
+- **`#privacidad`** — titular «Tu juego permanece contigo.»; las ROMs y partidas «están diseñadas para permanecer en tu dispositivo, no en nuestros servidores».
+- **`#precio`** — «Sin compras adicionales.» y «Actualizaciones incluidas con tu compra.»
+- **`#propiedad-intelectual`** — las cuatro tarjetas se reescribieron en forma general, sin enumerar franquicias, y la responsabilidad se enuncia en singular sobre «cualquier archivo que cargue en la aplicación».
+- **`terms.html` apartado 6** — misma reducción a Nintendo.
+
+Nomenclatura única del producto: una sola versión, sin «Premium», «Pro», «Ultimate», «Free» ni «Trial» en ninguna página (verificado por búsqueda).

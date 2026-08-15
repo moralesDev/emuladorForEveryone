@@ -204,3 +204,80 @@ footer{padding:44px 0 56px;border-top:1px solid rgba(233,233,237,.08);
   .btn{width:100%}
   .phone{width:100%;max-width:280px}
 }
+
+/* ══ Fase offline — bloques añadidos ══ */
+
+.offline-badge{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;
+  padding:7px 14px;border-radius:999px;font-size:14px;font-weight:500;
+  background:rgba(145,132,217,.14);border:1px solid rgba(145,132,217,.4);color:var(--accent-200)}
+.offline-badge i{font-size:16px}
+
+.pills{list-style:none;display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0;padding:0}
+.pills li{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:10px;
+  background:var(--glass);border:1px solid var(--glass-b);font-size:14px;color:var(--muted)}
+.pills i{font-size:16px;color:var(--accent-300)}
+
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+.fineprint{font-size:14px;line-height:1.75;color:var(--muted);margin:0}
+.fineprint a{color:var(--accent-300)}
+
+.scen{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+@media (max-width:900px){.scen{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.scen{grid-template-columns:1fr}}
+.scen h3{font-size:15px;margin:0 0 5px}
+.scen p{margin:0;font-size:13.5px;color:var(--muted)}
+
+.stack > p:not(.fineprint){display:flex;gap:9px;align-items:flex-start}
+.stack > p:not(.fineprint) i{font-size:16px;color:var(--accent-300);margin-top:3px;flex:none}
+
+.narr{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.narr p:last-child{margin-bottom:0}
+.situations{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.situations li{display:flex;align-items:center;gap:12px;padding:14px;border-radius:var(--r-md);
+  background:var(--surface);border:1px solid rgba(233,233,237,.06)}
+.sit-icon{width:34px;height:34px;flex:none;border-radius:10px;background:var(--accent-900);
+  display:grid;place-items:center}
+.sit-icon i{font-size:17px;color:var(--accent-300)}
+.situations strong{display:block;font-weight:500;font-size:14px}
+.situations small{font-size:12px;color:var(--faint)}
+
+.slim{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;margin-top:32px}
+.slim h3{font-size:16.5px;margin:0 0 10px}
+.slim p{margin:0;font-size:14.5px}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ticks li{position:relative;padding-left:22px;font-size:14.5px;color:var(--muted)}
+.ticks li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;
+  background:var(--accent);opacity:.8}
+.ticks.big li{font-size:16px;color:var(--text)}
+
+.price-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.price{text-align:left}
+.price-tag{margin:0;font-size:clamp(38px,6vw,52px);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.price-tag span{font-size:.42em;color:var(--muted);letter-spacing:0;margin-left:6px}
+.price-tag sup{font-size:.34em;color:var(--accent-300);top:-1.1em}
+.price-sub{margin:6px 0 0;font-size:15px;color:var(--accent-200)}
+
+.legal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+@media (max-width:600px){.legal-grid{grid-template-columns:1fr}}
+.legal-grid h3{font-size:16px;margin:12px 0 7px}
+.legal-grid p{margin:0;font-size:14px;color:var(--muted)}
+.legal-icon{width:34px;height:34px;border-radius:10px;background:rgba(145,132,217,.14);
+  display:grid;place-items:center}
+.legal-icon i{font-size:17px;color:var(--accent-300)}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}
+
+.reveal{animation:fadeUp .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .reveal{animation:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:880px){
+  .split,.narr,.price-grid,.slim{grid-template-columns:1fr;gap:28px}
+  .narr{gap:34px}
+}
+@media (max-width:520px){
+  .situations{grid-template-columns:1fr}
+  .pills li{width:100%}
+}

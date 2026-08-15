@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EmuladorForEveryone — Una experiencia GBA moderna para Android</title>
-<meta name="description" content="Emulador independiente de Game Boy Advance para Android, desarrollado por moralesDev. Diseño moderno, controles táctiles y tus propios archivos en tu dispositivo.">
+<title>EmuladorForEveryone — Emulador GBA para Android que funciona sin conexión</title>
+<meta name="description" content="Emulador de Game Boy Advance para Android diseñado para jugar sin conexión a Internet. Tus juegos y tus partidas en tu dispositivo. Pago único, sin anuncios ni suscripciones.">
+<link rel="canonical" href="https://moralesdev.github.io/emuladorForEveryone/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EmuladorForEveryone">
-<meta property="og:title" content="EmuladorForEveryone — Una experiencia GBA moderna para Android">
-<meta property="og:description" content="Emulador independiente de Game Boy Advance para Android, desarrollado por moralesDev. Diseño moderno, controles táctiles y tus propios archivos en tu dispositivo.">
+<meta property="og:title" content="EmuladorForEveryone — Tu GBA. En cualquier lugar.">
+<meta property="og:description" content="Emulador GBA para Android diseñado para jugar sin conexión a Internet. Tus partidas se guardan en tu dispositivo.">
+<meta property="og:url" content="https://moralesdev.github.io/emuladorForEveryone/">
+<meta property="og:image" content="https://moralesdev.github.io/emuladorForEveryone/assets/images/og-image.png">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -29,6 +32,7 @@
 </a>
 <nav class="nav-links" aria-label="Navegación principal">
 <a href="index.html" aria-current="page">Inicio</a>
+<a href="index.html#offline">Offline</a>
 <a href="index.html#caracteristicas">Características</a>
 <a href="privacy.html">Privacidad</a>
 <a href="terms.html">Términos</a>
@@ -41,19 +45,24 @@
 <section class="hero">
 <div class="wrap hero-grid">
 <div>
-<p class="kicker">Aplicación Android · moralesDev</p>
-<h1>EmuladorForEveryone</h1>
-<p class="lead" style="font-size:19px;color:var(--text);opacity:.9;margin-bottom:14px">Una experiencia GBA moderna para Android.</p>
-<p class="lead">Un emulador independiente diseñado para ofrecer una experiencia sencilla, cómoda y moderna para jugar tus propios juegos de Game Boy Advance.</p>
+<p class="kicker">EmuladorForEveryone · Android · moralesDev</p>
+<h1>Tu GBA.<br>En cualquier lugar.</h1>
+<p class="offline-badge"><i class="ph ph-wifi-slash" aria-hidden="true"></i> Juega sin Internet</p>
+<p class="lead">Un emulador independiente de Game Boy Advance para Android, diseñado para llevar tus juegos y tus partidas contigo y jugar sin conexión a Internet.</p>
+<ul class="pills">
+<li><i class="ph ph-game-controller" aria-hidden="true"></i> Juega sin conexión</li>
+<li><i class="ph ph-floppy-disk" aria-hidden="true"></i> Tus partidas en tu dispositivo</li>
+<li><i class="ph ph-device-mobile" aria-hidden="true"></i> Diseñado para Android</li>
+</ul>
 <div class="btn-row">
-<a class="btn btn-primary" href="#caracteristicas">Conocer la aplicación</a>
+<a class="btn btn-primary" href="#caracteristicas">Conoce la aplicación</a>
 <a class="btn btn-secondary" href="privacy.html">Privacidad</a>
 </div>
-<p class="hero-note">La aplicación se encuentra en desarrollo y todavía no está publicada en Google Play. No incluye juegos ni ROMs.</p>
+<p class="hero-note">La aplicación está en desarrollo y todavía no se ha publicado en Google Play. No incluye juegos ni ROMs: usas tus propios archivos.</p>
 </div>
 <div class="phone" role="img" aria-label="Mockup de la interfaz de EmuladorForEveryone: pantalla de juego en formato 3:2 y controles táctiles translúcidos">
 <div class="phone-screen">
-<div class="status"><span>8:32</span><span>Wi-Fi · 84%</span></div>
+<div class="status"><span>8:32</span><span>Sin conexión · 84%</span></div>
 <div class="gba-frame"><span>240 × 160</span></div>
 <div class="pad-area">
 <div class="pad-top">
@@ -78,6 +87,43 @@
 
 <hr class="rule">
 
+<section id="offline">
+<div class="wrap">
+<div class="split">
+<div>
+<p class="kicker">100% offline para jugar</p>
+<h2>Sin Internet. Sin problemas.</h2>
+<p class="lead">Una vez instalada la aplicación y con tus juegos disponibles en el dispositivo, puedes disfrutar de tu experiencia de juego sin depender de una conexión permanente a Internet.</p>
+</div>
+<p class="fineprint">Descargar la aplicación desde Google Play, instalarla y recibir actualizaciones sí requiere conexión. Lo que no la necesita es la experiencia de juego: la emulación y los datos que ya están guardados en tu dispositivo.</p>
+</div>
+<div class="scen">
+<article class="card reveal" style="animation-delay:0ms">
+<div class="card-icon"><i class="ph ph-airplane-tilt" aria-hidden="true"></i></div>
+<h3>En el avión</h3>
+<p>Disfruta tus juegos incluso durante un vuelo.</p>
+</article>
+<article class="card reveal" style="animation-delay:70ms">
+<div class="card-icon"><i class="ph ph-train" aria-hidden="true"></i></div>
+<h3>En el metro</h3>
+<p>Sin señal. Sin problema.</p>
+</article>
+<article class="card reveal" style="animation-delay:140ms">
+<div class="card-icon"><i class="ph ph-tent" aria-hidden="true"></i></div>
+<h3>Sin cobertura</h3>
+<p>Juega donde no tengas conexión.</p>
+</article>
+<article class="card reveal" style="animation-delay:210ms">
+<div class="card-icon"><i class="ph ph-cell-signal-slash" aria-hidden="true"></i></div>
+<h3>Sin datos móviles</h3>
+<p>No necesitas consumir datos móviles para jugar.</p>
+</article>
+</div>
+</div>
+</section>
+
+<hr class="rule">
+
 <section id="caracteristicas">
 <div class="wrap">
 <p class="kicker">Características</p>
@@ -85,16 +131,22 @@
 <p class="lead">Un conjunto reducido de funciones, resueltas con cuidado. Cada función marcada como <em>en desarrollo</em> todavía no está terminada.</p>
 <div class="cards">
 <article class="card">
+<div class="card-icon"><i class="ph ph-wifi-slash" aria-hidden="true"></i></div>
+<div class="card-head"><h3>Juego offline</h3><!-- Añade esta etiqueta si la función aún no está terminada:
+<span class="tag tag-outline">En desarrollo</span> --></div>
+<p>Una vez instalada la aplicación y con tus juegos en el dispositivo, puedes jugar sin conexión a Internet.</p>
+</article>
+<article class="card">
 <div class="card-icon"><i class="ph ph-game-controller" aria-hidden="true"></i></div>
 <div class="card-head"><h3>Emulación GBA</h3><!-- Añade esta etiqueta si la función aún no está terminada:
 <span class="tag tag-outline">En desarrollo</span> --></div>
-<p>Ejecuta tus propios archivos compatibles con Game Boy Advance.</p>
+<p>Ejecuta tus propios juegos de Game Boy Advance desde los archivos que ya tienes.</p>
 </article>
 <article class="card">
 <div class="card-icon"><i class="ph ph-floppy-disk" aria-hidden="true"></i></div>
-<div class="card-head"><h3>Guardado de partidas</h3><!-- Añade esta etiqueta si la función aún no está terminada:
+<div class="card-head"><h3>Partidas locales</h3><!-- Añade esta etiqueta si la función aún no está terminada:
 <span class="tag tag-outline">En desarrollo</span> --></div>
-<p>Conserva tu progreso directamente en tu dispositivo.</p>
+<p>Tu progreso se conserva directamente en tu dispositivo.</p>
 </article>
 <article class="card">
 <div class="card-icon"><i class="ph ph-lightning" aria-hidden="true"></i></div>
@@ -104,22 +156,111 @@
 </article>
 <article class="card">
 <div class="card-icon"><i class="ph ph-sliders-horizontal" aria-hidden="true"></i></div>
-<div class="card-head"><h3>Controles personalizables</h3><!-- Añade esta etiqueta si la función aún no está terminada:
+<div class="card-head"><h3>Controles táctiles</h3><!-- Añade esta etiqueta si la función aún no está terminada:
 <span class="tag tag-outline">En desarrollo</span> --></div>
 <p>Una interfaz táctil diseñada para jugar cómodamente.</p>
 </article>
 <article class="card">
-<div class="card-icon"><i class="ph ph-speaker-high" aria-hidden="true"></i></div>
-<div class="card-head"><h3>Audio</h3><!-- Añade esta etiqueta si la función aún no está terminada:
+<div class="card-icon"><i class="ph ph-device-mobile" aria-hidden="true"></i></div>
+<div class="card-head"><h3>Experiencia Android</h3><!-- Añade esta etiqueta si la función aún no está terminada:
 <span class="tag tag-outline">En desarrollo</span> --></div>
-<p>Experiencia de audio integrada con la emulación.</p>
+<p>Pensada para pantallas de teléfono en vertical, con controles grandes.</p>
 </article>
-<article class="card">
-<div class="card-icon"><i class="ph ph-lock-simple" aria-hidden="true"></i></div>
-<div class="card-head"><h3>Privacidad</h3><!-- Añade esta etiqueta si la función aún no está terminada:
-<span class="tag tag-outline">En desarrollo</span> --></div>
-<p>El objetivo del proyecto es mantener tus archivos y partidas en tu dispositivo.</p>
-</article>
+</div>
+</div>
+</section>
+
+<hr class="rule">
+
+<section id="experiencia">
+<div class="wrap">
+<div class="narr">
+<div>
+<p class="kicker">Experiencia</p>
+<h2>Tu juego va contigo.</h2>
+<p class="lead">No siempre tienes Wi-Fi. No siempre tienes señal. Y no siempre quieres estar conectado.</p>
+<p class="muted">EmuladorForEveryone está diseñado para que tus juegos y tus partidas estén disponibles directamente en tu dispositivo.</p>
+<p class="muted">Una vez configurado, puedes disfrutar de tu experiencia de juego sin depender de servidores ni de una conexión permanente.</p>
+</div>
+<ul class="situations">
+<li>
+<span class="sit-icon"><i class="ph ph-airplane-tilt" aria-hidden="true"></i></span>
+<div><strong>Vuelo</strong><small>Modo avión activado</small></div>
+</li>
+<li>
+<span class="sit-icon"><i class="ph ph-train" aria-hidden="true"></i></span>
+<div><strong>Trayecto</strong><small>Túnel, sin señal</small></div>
+</li>
+<li>
+<span class="sit-icon"><i class="ph ph-path" aria-hidden="true"></i></span>
+<div><strong>Viaje</strong><small>Roaming desactivado</small></div>
+</li>
+<li>
+<span class="sit-icon"><i class="ph ph-mountains" aria-hidden="true"></i></span>
+<div><strong>Lugar remoto</strong><small>Sin cobertura</small></div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<hr class="rule">
+
+<section id="privacidad">
+<div class="wrap">
+<div class="split">
+<div>
+<p class="kicker">Privacidad</p>
+<h2>Tu juego permanece contigo.</h2>
+<p class="lead">Offline también significa privado: menos conexión es menos información viajando. El diseño del proyecto va en esa dirección.</p>
+</div>
+<div class="stack">
+<p><i class="ph ph-check" aria-hidden="true"></i> El objetivo del proyecto es mantener la experiencia de juego en tu dispositivo.</p>
+<p><i class="ph ph-check" aria-hidden="true"></i> Las ROMs que seleccionas y las partidas que generas están diseñadas para permanecer en tu dispositivo, no en nuestros servidores.</p>
+<p><i class="ph ph-check" aria-hidden="true"></i> Las partidas y los estados de juego están diseñados para almacenarse localmente.</p>
+<p><i class="ph ph-check" aria-hidden="true"></i> La aplicación no necesita una conexión permanente a Internet para jugar.</p>
+<p class="fineprint">La <a href="privacy.html">política de privacidad</a> es el documento que manda: se mantendrá al día con el comportamiento real de la versión publicada, incluidos los servicios de terceros que llegaran a incorporarse.</p>
+</div>
+</div>
+
+<div class="panel slim">
+<div>
+<h3>Tu biblioteca. Tus partidas. Tu dispositivo.</h3>
+<ul class="ticks">
+<li>Los juegos que agregas a la aplicación permanecen bajo tu control.</li>
+<li>Las partidas se almacenan localmente en el dispositivo.</li>
+<li>El emulador no necesita subir tus partidas a la nube para que puedas jugar.</li>
+</ul>
+</div>
+<div>
+<h3>Sin cuentas innecesarias.</h3>
+<p class="muted">El objetivo es que puedas abrir la aplicación, cargar tus juegos y jugar sin crear una cuenta.</p>
+</div>
+</div>
+</div>
+</section>
+
+<hr class="rule">
+
+<section id="precio">
+<div class="wrap">
+<div class="price-grid">
+<div>
+<p class="kicker">Modelo de compra</p>
+<h2>Compra una vez.</h2>
+<ul class="ticks big">
+<li>Sin suscripciones.</li>
+<li>Sin anuncios.</li>
+<li>Sin compras adicionales.</li>
+<li>Actualizaciones incluidas con tu compra.</li>
+</ul>
+</div>
+<div class="panel panel-accent price">
+<p class="kicker" style="margin-bottom:8px">Precio previsto</p>
+<p class="price-tag">$14.900 <span>COP</span><sup>*</sup></p>
+<p class="price-sub">Pago único</p>
+<p class="fineprint" style="margin:14px 0 0">*Precio de referencia mientras se define el definitivo en Google Play. El cobro y los reembolsos los gestiona Google Play conforme a sus políticas.</p>
+</div>
 </div>
 </div>
 </section>
@@ -129,13 +270,31 @@
 <section id="propiedad-intelectual">
 <div class="wrap">
 <p class="kicker">Propiedad intelectual y ROMs</p>
-<h2>Cómo funciona este proyecto</h2>
-<div class="panel panel-accent stack" style="margin-top:26px">
-<p>EmuladorForEveryone es un proyecto independiente de emulación y no está afiliado, patrocinado ni respaldado por Nintendo, The Pokémon Company, Game Freak ni otros titulares de derechos de terceros.</p>
-<p>El emulador no distribuye ROMs comerciales, juegos, BIOS propietarias ni otros contenidos protegidos por derechos de autor que pertenezcan a terceros.</p>
-<p>Los usuarios son responsables de asegurarse de que tienen los derechos o autorización necesarios para utilizar cualquier ROM, archivo o contenido que carguen en la aplicación.</p>
-<p>El sitio web y la aplicación no proporcionan enlaces para descargar ROMs comerciales.</p>
+<h2>Un proyecto independiente</h2>
+<p class="lead">Conviene decirlo sin rodeos, porque define lo que la aplicación es y lo que no es.</p>
+<div class="legal-grid">
+<div class="panel panel-accent">
+<span class="legal-icon"><i class="ph ph-shield-check" aria-hidden="true"></i></span>
+<h3>Sin afiliación</h3>
+<p>EmuladorForEveryone es un proyecto independiente de emulación y no está afiliado, patrocinado ni respaldado por Nintendo ni por otros titulares de derechos de propiedad intelectual.</p>
 </div>
+<div class="panel">
+<span class="legal-icon"><i class="ph ph-prohibit" aria-hidden="true"></i></span>
+<h3>Sin ROMs incluidas</h3>
+<p>La aplicación no distribuye ROMs comerciales, juegos ni otros contenidos protegidos por derechos de autor pertenecientes a terceros.</p>
+</div>
+<div class="panel">
+<span class="legal-icon"><i class="ph ph-link-break" aria-hidden="true"></i></span>
+<h3>Sin enlaces de descarga</h3>
+<p>La aplicación no proporciona enlaces ni servicios para descargar ROMs, y este sitio tampoco.</p>
+</div>
+<div class="panel">
+<span class="legal-icon"><i class="ph ph-user-focus" aria-hidden="true"></i></span>
+<h3>Responsabilidad del usuario</h3>
+<p>El usuario es responsable de asegurarse de que tiene los derechos o autorizaciones necesarios para utilizar cualquier archivo que cargue en la aplicación.</p>
+</div>
+</div>
+<p class="fineprint" style="margin-top:20px">Más detalle en los <a href="terms.html">términos de uso</a>. Esta información es transparente, no asesoría jurídica.</p>
 </div>
 </section>
 
@@ -145,26 +304,11 @@
 <div class="wrap">
 <div class="panel play">
 <div>
-<p class="kicker" style="margin-bottom:6px">Disponible en Google Play</p>
-<h3 style="margin-bottom:6px">Distribución mediante Google Play</h3>
-<p class="muted" style="margin:0;font-size:14.5px">Cuando la ficha esté publicada, el botón enlazará a la aplicación. Reemplaza <span class="ph">[GOOGLE_PLAY_URL]</span> por la URL real.</p>
+<p class="kicker" style="margin-bottom:6px">Próximamente en Google Play</p>
+<h3 style="margin-bottom:6px">Aún no está publicada</h3>
+<p class="muted" style="margin:0;font-size:14.5px">Cuando la ficha esté disponible, el botón enlazará a la aplicación. Reemplaza <span class="ph">[GOOGLE_PLAY_URL]</span> por la URL real y quita <code>aria-disabled</code>.</p>
 </div>
-<a class="btn btn-primary" href="[GOOGLE_PLAY_URL]" aria-disabled="true"><i class="ph ph-play" aria-hidden="true"></i> Ver en Google Play</a>
-</div>
-</div>
-</section>
-
-<hr class="rule">
-
-<section id="contacto-breve">
-<div class="wrap narrow" style="text-align:left">
-<p class="kicker">Contacto y documentos</p>
-<h2>Transparencia del proyecto</h2>
-<p class="lead">La política de privacidad y los términos de uso describen el comportamiento real de la aplicación. Si algo no queda claro, escríbenos.</p>
-<div class="btn-row">
-<a class="btn btn-secondary" href="privacy.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Política de privacidad</a>
-<a class="btn btn-secondary" href="terms.html">Términos de uso</a>
-<a class="btn btn-secondary" href="contact.html"><i class="ph ph-envelope" aria-hidden="true"></i> Contacto</a>
+<a class="btn btn-primary" href="[GOOGLE_PLAY_URL]" aria-disabled="true"><i class="ph ph-google-play-logo" aria-hidden="true"></i> Próximamente</a>
 </div>
 </div>
 </section>
@@ -178,15 +322,16 @@
 <span class="mark"><i class="ph ph-game-controller" aria-hidden="true"></i></span>
 <strong style="font-weight:500">EmuladorForEveryone</strong>
 </div>
-<small>© 2026 moralesDev · Proyecto independiente.</small>
+<small>© 2026 moralesDev · Proyecto independiente de emulación para Android.</small>
 </div>
 <nav class="foot-links" aria-label="Enlaces legales">
 <a href="privacy.html">Privacidad</a>
 <a href="terms.html">Términos</a>
 <a href="contact.html">Contacto</a>
+<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener">GitHub</a>
 </nav>
 </div>
-<p class="disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo, The Pokémon Company, Game Freak, Bandai Namco, Toei Animation ni por ningún otro titular de derechos. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
+<p class="disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo ni por ningún otro titular de derechos de propiedad intelectual. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
 </div>
 </footer>
 </body>
