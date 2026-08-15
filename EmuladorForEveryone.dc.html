@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/nocturne-5cbb0c2b-5e81-4e09-b65f-a455732c73e9/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<script src="_ds/nocturne-5cbb0c2b-5e81-4e09-b65f-a455732c73e9/_ds_bundle.js"></script>
+<style>body{margin:0;background:#101220}</style>
+</helmet>
+<div style="padding:56px 60px 90px;background:#101220;color:var(--color-text);font-family:var(--font-body);min-width:2100px">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;max-width:1180px">
+    <div>
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Prototipo visual · Android</div>
+      <h1 style="font-size:40px;margin:10px 0 0;letter-spacing:-.025em">EmuladorForEveryone</h1>
+      <p style="margin:14px 0 0;max-width:620px;font-size:14px;line-height:1.7;color:color-mix(in srgb,var(--color-text) 62%,transparent)">Una consola GBA moderna dentro de un teléfono Android. Interfaz oscura, controles de vidrio traslúcido con feedback al pulsar, y la pantalla de juego siempre en 3:2 sin deformar. El teléfono de la izquierda es navegable: toca un juego para cargarlo, el botón central para el menú de pausa, y el idioma se cambia desde Configuración.</p>
+    </div>
+  </div>
+
+  <div style="height:1px;margin:34px 0 40px;background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent);max-width:1180px"></div>
+
+  <div style="display:flex;align-items:flex-start;gap:56px;flex-wrap:wrap">
+    <div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:16px">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:3px 7px;border-radius:5px;background:color-mix(in srgb,var(--color-accent) 20%,transparent);color:var(--color-accent-200)">NAVEGABLE</span>
+        <span style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 50%,transparent)">Flujo real · 360 × 780 dp</span>
+      </div>
+      <div style="width:386px;padding:11px;border-radius:44px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.08),0 40px 90px rgba(0,0,0,.65)">
+        <div style="border-radius:34px;overflow:hidden;background:#000;box-shadow:inset 0 0 0 1px rgba(0,0,0,.9)">
+          <dc-import name="AppScreens" screen="library" hint-size="360px,780px"></dc-import>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex:1;min-width:520px;max-width:640px;display:flex;flex-direction:column;gap:26px;padding-top:38px">
+      <div>
+        <h4 style="margin:0 0 12px;font-size:17px">Decisiones de diseño</h4>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="padding:13px 15px;border-radius:12px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+            <div style="font-size:13.5px;font-family:var(--font-heading)">La pantalla domina, los controles ceden</div>
+            <div style="font-size:12.5px;line-height:1.6;margin-top:3px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">El marco de juego es a sangre completa en 3:2 con negro puro alrededor. Los controles viven sobre el fondo de la app, no encima del juego, para que nada tape la imagen.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:12px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+            <div style="font-size:13.5px;font-family:var(--font-heading)">Vidrio traslúcido, no plástico</div>
+            <div style="font-size:12.5px;line-height:1.6;margin-top:3px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">Relleno al 7–12% de blanco, borde de 1px, desenfoque de fondo y sombra suave. Al pulsar: escala 0.92–0.94 y tinte del color de acento. Sin degradados brillantes ni relieves falsos.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:12px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+            <div style="font-size:13.5px;font-family:var(--font-heading)">Tamaños táctiles por encima del mínimo</div>
+            <div style="font-size:12.5px;line-height:1.6;margin-top:3px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">D-Pad de 48 dp por brazo (144 dp de cruz), A de 78 dp, B de 66 dp, L/R de 88 × 34 dp, y el bloque A/B desplazado hacia abajo para que B no quede al nivel de la flecha derecha. Todo el área de controles queda por encima de la barra de gestos.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:12px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+            <div style="font-size:13.5px;font-family:var(--font-heading)">Identidad propia</div>
+            <div style="font-size:12.5px;line-height:1.6;margin-top:3px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">Acento blurple #9184d9, marca tipográfica con un mando de contorno, y nombres de juego inventados. El marco de juego es un hueco vacío a propósito: arrastra tu propia captura y se guarda.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin:0 0 12px;font-size:17px">Pendiente de tu decisión</h4>
+        <div style="font-size:12.5px;line-height:1.8;color:color-mix(in srgb,var(--color-text) 55%,transparent)">
+          Modo horizontal (landscape) · explorador de archivos para elegir la ROM · pantalla de detalle antes de jugar · reasignación de controles. Dímelo y los añado.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1px;margin:56px 0 40px;background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent)"></div>
+
+  <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:22px">
+    <h3 style="margin:0;font-size:24px;letter-spacing:-.02em">Las diez pantallas</h3>
+    <span style="font-size:12.5px;color:color-mix(in srgb,var(--color-text) 45%,transparent)">Cada una es interactiva; navega desde cualquiera</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(5,386px);gap:38px 30px">
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">01</span><span style="font-size:13px">Onboarding</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="onboarding" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">02</span><span style="font-size:13px">Biblioteca vacía</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="empty" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">03</span><span style="font-size:13px">Mis juegos</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="library" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">04</span><span style="font-size:13px">Cargando ROM</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="loading" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">05</span><span style="font-size:13px">ROM no válida</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="error" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">06</span><span style="font-size:13px">Pantalla de juego</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="game" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">07</span><span style="font-size:13px">Menú de pausa</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="pause" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">08</span><span style="font-size:13px">Save States</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="states" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">09</span><span style="font-size:13px">Configuración</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="settings" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(233,233,237,.08);color:color-mix(in srgb,var(--color-text) 70%,transparent)">10</span><span style="font-size:13px">Acerca de</span></div>
+      <div style="padding:9px;border-radius:38px;background:linear-gradient(160deg,#2b2e3f,#15161f);box-shadow:0 0 0 1px rgba(233,233,237,.06),0 20px 50px rgba(0,0,0,.5)"><div style="border-radius:30px;overflow:hidden;background:#000"><dc-import name="AppScreens" screen="about" hint-size="360px,780px"></dc-import></div></div>
+    </div>
+  </div>
+
+  <div style="height:1px;margin:56px 0 40px;background:linear-gradient(to right,transparent,var(--color-divider) 48px,var(--color-divider) calc(100% - 48px),transparent)"></div>
+
+  <h3 style="margin:0 0 22px;font-size:24px;letter-spacing:-.02em">Sistema visual</h3>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:26px;max-width:1780px">
+
+    <div style="padding:20px;border-radius:16px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+      <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:14px">Color</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:11px"><div style="width:34px;height:34px;border-radius:9px;background:#161826;box-shadow:0 0 0 1px rgba(233,233,237,.14)"></div><div><div style="font-size:12.5px">Fondo</div><div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 42%,transparent)">#161826</div></div></div>
+        <div style="display:flex;align-items:center;gap:11px"><div style="width:34px;height:34px;border-radius:9px;background:#232532"></div><div><div style="font-size:12.5px">Superficie</div><div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 42%,transparent)">#232532</div></div></div>
+        <div style="display:flex;align-items:center;gap:11px"><div style="width:34px;height:34px;border-radius:9px;background:#9184d9"></div><div><div style="font-size:12.5px">Acento</div><div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 42%,transparent)">#9184d9</div></div></div>
+        <div style="display:flex;align-items:center;gap:11px"><div style="width:34px;height:34px;border-radius:9px;background:#05060c;box-shadow:0 0 0 1px rgba(233,233,237,.14)"></div><div><div style="font-size:12.5px">Marco de juego</div><div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 42%,transparent)">#05060c</div></div></div>
+        <div style="display:flex;gap:0;margin-top:4px;border-radius:7px;overflow:hidden">
+          <div style="flex:1;height:22px;background:#f5f4ff"></div><div style="flex:1;height:22px;background:#d2cefd"></div><div style="flex:1;height:22px;background:#b5abfc"></div><div style="flex:1;height:22px;background:#968ae0"></div><div style="flex:1;height:22px;background:#796cbf"></div><div style="flex:1;height:22px;background:#5d5294"></div><div style="flex:1;height:22px;background:#423a6a"></div><div style="flex:1;height:22px;background:#2b2741"></div>
+        </div>
+        <div style="font-size:11px;color:color-mix(in srgb,var(--color-text) 40%,transparent)">Rampa de acento 100 → 900</div>
+      </div>
+    </div>
+
+    <div style="padding:20px;border-radius:16px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+      <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:14px">Tipografía y escala</div>
+      <div style="font-family:var(--font-heading);font-weight:500;font-size:27px;letter-spacing:-.02em;line-height:1.15">Mis juegos</div>
+      <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 40%,transparent);margin-top:3px">Inter 500 · 27 / 31</div>
+      <div style="font-family:var(--font-heading);font-weight:500;font-size:18px;margin-top:16px">Título de sección</div>
+      <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 40%,transparent);margin-top:3px">Inter 500 · 18 / 21</div>
+      <div style="font-size:13.5px;margin-top:16px;line-height:1.6">Texto de interfaz, filas de ajustes y descripciones cortas.</div>
+      <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 40%,transparent);margin-top:3px">Inter 400 · 13.5 / 22</div>
+      <div style="font-size:11.5px;margin-top:16px;color:color-mix(in srgb,var(--color-text) 48%,transparent)">Metadatos: última partida, tamaño, fecha</div>
+      <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:color-mix(in srgb,var(--color-text) 40%,transparent);margin-top:3px">Inter 400 · 11.5 · 48% opacidad</div>
+      <div style="height:1px;margin:16px 0;background:rgba(233,233,237,.07)"></div>
+      <div style="font-size:12px;line-height:1.9;color:color-mix(in srgb,var(--color-text) 55%,transparent)">Espaciado 4 · 8 · 12 · 16 · 22 dp<br>Radios 8 · 10 · 12 · 14 · 18 dp<br>Círculos completos en A / B</div>
+    </div>
+
+    <div style="padding:20px;border-radius:16px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+      <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:14px">Botones y estados</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <button style="height:44px;border-radius:12px;background:transparent;border:1px solid var(--color-accent);color:var(--color-accent-200);font-family:var(--font-heading);font-size:13.5px;cursor:pointer" style-hover="background:color-mix(in srgb,var(--color-accent) 14%,transparent)" style-active="transform:scale(.98)">Principal · acento en contorno</button>
+        <button style="height:44px;border-radius:12px;background:rgba(233,233,237,.07);border:1px solid rgba(233,233,237,.13);color:var(--color-text);font-family:var(--font-heading);font-size:13.5px;cursor:pointer" style-hover="background:rgba(233,233,237,.12)" style-active="transform:scale(.98)">Secundario · vidrio</button>
+        <button style="height:44px;border-radius:12px;background:none;border:0;color:color-mix(in srgb,var(--color-text) 55%,transparent);font-family:var(--font-heading);font-size:13.5px;cursor:pointer" style-hover="background:rgba(233,233,237,.07);color:var(--color-text)">Fantasma · fila de menú</button>
+        <button disabled style="height:44px;border-radius:12px;background:rgba(233,233,237,.05);border:1px solid rgba(233,233,237,.08);color:var(--color-text);font-family:var(--font-heading);font-size:13.5px;opacity:.45">Deshabilitado</button>
+        <div style="display:flex;gap:10px;margin-top:2px">
+          <div style="flex:1;text-align:center"><div style="height:52px;border-radius:12px;background:rgba(233,233,237,.07);border:1px solid rgba(233,233,237,.13);display:grid;place-items:center;font-family:var(--font-heading);font-size:15px">B</div><div style="font-size:10.5px;margin-top:6px;color:color-mix(in srgb,var(--color-text) 42%,transparent)">Normal</div></div>
+          <div style="flex:1;text-align:center"><div style="height:52px;border-radius:12px;background:color-mix(in srgb,var(--color-accent) 30%,transparent);border:1px solid color-mix(in srgb,var(--color-accent) 55%,transparent);display:grid;place-items:center;font-family:var(--font-heading);font-size:15px;color:var(--color-accent-100);transform:scale(.94)">B</div><div style="font-size:10.5px;margin-top:6px;color:color-mix(in srgb,var(--color-text) 42%,transparent)">Presionado</div></div>
+          <div style="flex:1;text-align:center"><div style="height:52px;border-radius:12px;background:rgba(233,233,237,.04);border:1px solid rgba(233,233,237,.08);display:grid;place-items:center;font-family:var(--font-heading);font-size:15px;opacity:.45">B</div><div style="font-size:10.5px;margin-top:6px;color:color-mix(in srgb,var(--color-text) 42%,transparent)">Inactivo</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:20px;border-radius:16px;background:var(--color-surface);border:1px solid rgba(233,233,237,.06)">
+      <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:14px">Controles y profundidad</div>
+      <div style="display:flex;gap:16px;align-items:center;padding:16px;border-radius:12px;background:linear-gradient(#111321,#161826)">
+        <div style="display:grid;grid-template-columns:repeat(3,32px);grid-template-rows:repeat(3,32px);gap:2px">
+          <div></div><div style="grid-area:1/2;border-radius:9px 9px 3px 3px;background:rgba(233,233,237,.12);border:1px solid rgba(233,233,237,.13);border-bottom:0"></div><div></div>
+          <div style="grid-area:2/1;border-radius:9px 3px 3px 9px;background:rgba(233,233,237,.12);border:1px solid rgba(233,233,237,.13);border-right:0"></div>
+          <div style="grid-area:2/2;background:rgba(233,233,237,.12);border-top:1px solid rgba(233,233,237,.13);border-bottom:1px solid rgba(233,233,237,.13)"></div>
+          <div style="grid-area:2/3;border-radius:3px 9px 9px 3px;background:rgba(233,233,237,.12);border:1px solid rgba(233,233,237,.13);border-left:0"></div>
+          <div></div><div style="grid-area:3/2;border-radius:3px 3px 9px 9px;background:rgba(233,233,237,.12);border:1px solid rgba(233,233,237,.13);border-top:0"></div><div></div>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:9px">
+          <div style="width:42px;height:42px;border-radius:50%;background:rgba(233,233,237,.07);border:1px solid rgba(233,233,237,.13);display:grid;place-items:center;font-family:var(--font-heading);font-size:13px;color:color-mix(in srgb,var(--color-text) 72%,transparent)">B</div>
+          <div style="width:50px;height:50px;border-radius:50%;background:color-mix(in srgb,var(--color-accent) 16%,transparent);border:1px solid color-mix(in srgb,var(--color-accent) 55%,transparent);display:grid;place-items:center;font-family:var(--font-heading);font-size:15px;color:var(--color-accent-200);box-shadow:0 0 20px color-mix(in srgb,var(--color-accent) 16%,transparent)">A</div>
+        </div>
+      </div>
+      <div style="font-size:12px;line-height:1.9;margin-top:14px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">
+        D-Pad 48 dp/brazo · A 78 · B 66<br>
+        Relleno 7% · borde 13% · blur 8px<br>
+        Sombra: 0 8px 18px rgba(0,0,0,.4)<br>
+        Presionado: escala 0.92 + tinte acento 30%<br>
+        Opacidad global ajustable 20 → 100%
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
