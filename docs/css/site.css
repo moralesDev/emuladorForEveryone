@@ -71,6 +71,14 @@ section{padding:76px 0}
 .nav-links a:hover{color:var(--text);background:var(--glass);text-decoration:none}
 .nav-links a[aria-current="page"]{color:var(--accent-200);background:rgba(145,132,217,.14)}
 
+.lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px;
+  border-radius:999px;background:var(--glass);border:1px solid var(--glass-b);flex:none}
+.lang-btn{appearance:none;border:0;background:transparent;color:var(--muted);
+  font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.02em;
+  padding:5px 11px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
+.lang-btn:hover{color:var(--text)}
+.lang-btn.active{background:rgba(145,132,217,.24);color:var(--accent-100)}
+
 /* — botones — */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   min-height:46px;padding:0 20px;border-radius:var(--r-md);cursor:pointer;
@@ -201,6 +209,7 @@ footer{padding:44px 0 56px;border-top:1px solid rgba(233,233,237,.08);
   body{font-size:15.5px}
   .nav-links{width:100%;margin-left:0;justify-content:flex-start}
   .nav-links a{padding:7px 9px}
+  .lang-switch{margin-left:0}
   .btn{width:100%}
   .phone{width:100%;max-width:280px}
 }

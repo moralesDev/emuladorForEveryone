@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contacto — EmuladorForEveryone</title>
+<title data-i18n="contactPage.docTitle">Contacto — EmuladorForEveryone</title>
 <meta name="description" content="Contacto de soporte de la aplicación Android EmuladorForEveryone, desarrollada por moralesDev.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="css/site.css">
+<script src="js/i18n.js" defer></script>
 </head>
 <body>
 <header class="nav">
@@ -27,48 +28,67 @@
 <span class="mark"><i class="ph ph-game-controller" aria-hidden="true"></i></span>
 <span>EmuladorForEveryone</span>
 </a>
-<nav class="nav-links" aria-label="Navegación principal">
-<a href="index.html">Inicio</a>
-<a href="index.html#offline">Offline</a>
-<a href="index.html#caracteristicas">Características</a>
-<a href="privacy.html">Privacidad</a>
-<a href="terms.html">Términos</a>
-<a href="contact.html" aria-current="page">Contacto</a>
+<nav class="nav-links" data-i18n-aria="nav.aria" aria-label="Navegación principal">
+<a href="index.html" data-i18n="nav.home">Inicio</a>
+<a href="index.html#offline" data-i18n="nav.offline">Offline</a>
+<a href="index.html#caracteristicas" data-i18n="nav.features">Características</a>
+<a href="privacy.html" data-i18n="nav.privacy">Privacidad</a>
+<a href="terms.html" data-i18n="nav.terms">Términos</a>
+<a href="contact.html" aria-current="page" data-i18n="nav.contact">Contacto</a>
 </nav>
+<div class="lang-switch" role="group" data-i18n-aria="langswitch.aria" aria-label="Selector de idioma">
+<button type="button" class="lang-btn" data-lang="es">ES</button>
+<button type="button" class="lang-btn" data-lang="en">EN</button>
+</div>
 </div>
 </header>
 <main class="doc">
 <div class="wrap narrow">
-<p class="kicker">Soporte</p>
-<h1 style="font-size:clamp(30px,4.6vw,42px)">Contacto</h1>
-<p class="lead">¿Tienes preguntas, problemas o quieres reportar un problema?</p>
+<p class="kicker" data-i18n="contactPage.kicker">Soporte</p>
+<h1 style="font-size:clamp(30px,4.6vw,42px)" data-i18n="contactPage.h1">Contacto</h1>
+<p class="lead" data-i18n="contactPage.lead">¿Tienes un problema, una duda o una idea para la próxima versión?</p>
 
 <div class="panel panel-accent" style="margin-top:30px">
 <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
 <span class="card-icon" style="margin:0"><i class="ph ph-envelope" aria-hidden="true"></i></span>
 <div>
-<p class="kicker" style="margin:0 0 2px">Correo de soporte</p>
+<p class="kicker" style="margin:0 0 2px" data-i18n="contactPage.mailKicker">Correo de soporte</p>
 <a href="mailto:alessadro_9@hotmail.com" style="font-size:17px">alessadro_9@hotmail.com</a>
 </div>
 </div>
-<p class="muted" style="margin:0;font-size:14.5px">Escribe en español o en inglés. Es un proyecto independiente, así que la respuesta puede tardar unos días.</p>
+<p class="muted" style="margin:0;font-size:14.5px" data-i18n="contactPage.mailNote">Escribe en español o en inglés. Es un proyecto independiente, así que la respuesta puede tardar unos días.</p>
 </div>
 
-<h2 style="margin-top:44px">Para reportar un problema</h2>
-<p>Incluir estos datos ayuda a reproducir el fallo:</p>
+<h2 style="margin-top:44px" data-i18n="contactPage.h2_report">Para reportar un problema</h2>
+<p data-i18n="contactPage.reportIntro">Incluir estos datos ayuda a reproducir el fallo:</p>
 <ul>
-<li>modelo del dispositivo y versión de Android;</li>
-<li>versión de la aplicación (aparece en «Acerca de»);</li>
-<li>qué estabas haciendo cuando ocurrió el problema;</li>
-<li>si es reproducible, los pasos para provocarlo.</li>
+<li data-i18n="contactPage.li_r1">modelo del dispositivo y versión de Android;</li>
+<li data-i18n="contactPage.li_r2">versión de la aplicación (aparece en «Acerca de»);</li>
+<li data-i18n="contactPage.li_r3">qué estabas haciendo cuando ocurrió el problema;</li>
+<li data-i18n="contactPage.li_r4">si es reproducible, los pasos para provocarlo.</li>
 </ul>
-<p class="muted" style="font-size:14.5px">No envíes ROMs, juegos ni otros archivos protegidos por derechos de autor: no podemos recibirlos ni almacenarlos.</p>
+<p class="muted" style="font-size:14.5px" data-i18n="contactPage.reportNote">No envíes ROMs, juegos ni otros archivos protegidos por derechos de autor: no podemos recibirlos ni almacenarlos.</p>
 
-<h2 style="margin-top:40px">Otros temas</h2>
+<h2 id="sugerencias" style="margin-top:40px" data-i18n="contactPage.h2_ideas">Ideas y sugerencias</h2>
+<p data-i18n="contactPage.ideasP1">Detrás de esta app hay una persona, no una empresa. Eso tiene una parte mala —a veces tardo unos días en contestar— y una buena: quien lee tu correo es quien decide qué se programa la semana siguiente.</p>
+<p data-i18n="contactPage.ideasP2">Así que si algo te incomoda, te falta o se te ocurre cómo mejorarlo, escríbeme. No hace falta que la idea esté pulida ni que sepas de programación: «en horizontal no llego al botón R» ya es suficiente para que algo entre en la lista.</p>
+<p class="muted" style="font-size:14.5px" data-i18n="contactPage.ideasNote">No puedo prometerte que todo se implemente, ni cuándo. Sí puedo prometerte que lo leo y que te respondo.</p>
+
+<h2 style="margin-top:40px" data-i18n="contactPage.h2_support">Apoyar el proyecto</h2>
+<p data-i18n="contactPage.supportP">La app se mantiene con un pago único, sin suscripciones ni anuncios. Si quieres que siga creciendo, hay tres cosas que ayudan de verdad:</p>
+<div class="panel" style="margin-top:20px">
+<ul style="margin:0">
+<li data-i18n="contactPage.li_s1"><strong>Deja una reseña en Google Play.</strong> Es lo que hace que otras personas la encuentren.</li>
+<li data-i18n="contactPage.li_s2"><strong>Cuéntaselo a alguien</strong> a quien le guste volver a los juegos de siempre.</li>
+<li data-i18n="contactPage.li_s3"><strong>Escríbeme también cuando algo funcione bien.</strong> Saber qué no hay que tocar es tan útil como saber qué arreglar.</li>
+</ul>
+</div>
+
+<h2 style="margin-top:40px" data-i18n="contactPage.h2_other">Otros temas</h2>
 <ul>
-<li><strong>Privacidad:</strong> consulta la <a href="privacy.html">política de privacidad</a> antes de escribir; puede que ya responda tu duda.</li>
-<li><strong>Condiciones de uso:</strong> revisa los <a href="terms.html">términos de uso</a>.</li>
-<li><strong>Titulares de derechos:</strong> si representas a un titular de derechos y quieres plantear una cuestión sobre este proyecto, escribe al correo de soporte indicándolo en el asunto.</li>
+<li data-i18n="contactPage.li_o1"><strong>Privacidad:</strong> consulta la <a href="privacy.html">política de privacidad</a> antes de escribir; puede que ya responda tu duda.</li>
+<li data-i18n="contactPage.li_o2"><strong>Condiciones de uso:</strong> revisa los <a href="terms.html">términos de uso</a>.</li>
+<li data-i18n="contactPage.li_o3"><strong>Titulares de derechos:</strong> si representas a un titular de derechos y quieres plantear una cuestión sobre este proyecto, escribe al correo de soporte indicándolo en el asunto.</li>
 </ul>
 </div>
 </main>
@@ -80,16 +100,16 @@
 <span class="mark"><i class="ph ph-game-controller" aria-hidden="true"></i></span>
 <strong style="font-weight:500">EmuladorForEveryone</strong>
 </div>
-<small>© 2026 moralesDev · Proyecto independiente de emulación para Android.</small>
+<small data-i18n="footer.copyright">© 2026 moralesDev · Proyecto independiente de emulación para Android.</small>
 </div>
-<nav class="foot-links" aria-label="Enlaces legales">
-<a href="privacy.html">Privacidad</a>
-<a href="terms.html">Términos</a>
-<a href="contact.html">Contacto</a>
-<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener">GitHub</a>
+<nav class="foot-links" data-i18n-aria="footer.aria" aria-label="Enlaces legales">
+<a href="privacy.html" data-i18n="nav.privacy">Privacidad</a>
+<a href="terms.html" data-i18n="nav.terms">Términos</a>
+<a href="contact.html" data-i18n="nav.contact">Contacto</a>
+<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener" data-i18n="nav.github">GitHub</a>
 </nav>
 </div>
-<p class="disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo ni por ningún otro titular de derechos de propiedad intelectual. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
+<p class="disclaimer" data-i18n="footer.disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo ni por ningún otro titular de derechos de propiedad intelectual. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
 </div>
 </footer>
 </body>

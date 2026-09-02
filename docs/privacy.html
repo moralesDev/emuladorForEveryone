@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Política de privacidad — EmuladorForEveryone</title>
+<title data-i18n="privacyPage.docTitle">Política de privacidad — EmuladorForEveryone</title>
 <meta name="description" content="Política de privacidad de la aplicación Android EmuladorForEveryone, desarrollada por moralesDev. Almacenamiento local, sin cuentas y sin publicidad.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="css/site.css">
+<script src="js/i18n.js" defer></script>
 </head>
 <body>
 <header class="nav">
@@ -27,109 +28,113 @@
 <span class="mark"><i class="ph ph-game-controller" aria-hidden="true"></i></span>
 <span>EmuladorForEveryone</span>
 </a>
-<nav class="nav-links" aria-label="Navegación principal">
-<a href="index.html">Inicio</a>
-<a href="index.html#offline">Offline</a>
-<a href="index.html#caracteristicas">Características</a>
-<a href="privacy.html" aria-current="page">Privacidad</a>
-<a href="terms.html">Términos</a>
-<a href="contact.html">Contacto</a>
-<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener">GitHub</a>
+<nav class="nav-links" data-i18n-aria="nav.aria" aria-label="Navegación principal">
+<a href="index.html" data-i18n="nav.home">Inicio</a>
+<a href="index.html#offline" data-i18n="nav.offline">Offline</a>
+<a href="index.html#caracteristicas" data-i18n="nav.features">Características</a>
+<a href="privacy.html" aria-current="page" data-i18n="nav.privacy">Privacidad</a>
+<a href="terms.html" data-i18n="nav.terms">Términos</a>
+<a href="contact.html" data-i18n="nav.contact">Contacto</a>
+<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener" data-i18n="nav.github">GitHub</a>
 </nav>
+<div class="lang-switch" role="group" data-i18n-aria="langswitch.aria" aria-label="Selector de idioma">
+<button type="button" class="lang-btn" data-lang="es">ES</button>
+<button type="button" class="lang-btn" data-lang="en">EN</button>
+</div>
 </div>
 </header>
 <main class="doc">
 <div class="wrap narrow">
-<p class="kicker">Documento legal</p>
-<h1 style="font-size:clamp(30px,4.6vw,42px)">Política de privacidad</h1>
-<p class="meta">Última actualización: 15 de agosto de 2026</p>
-<p class="lead">Este documento describe cómo la aplicación EmuladorForEveryone trata la información. Está redactado en lenguaje claro y refleja el comportamiento previsto de la aplicación en el momento de su publicación. No constituye asesoría jurídica.</p>
+<p class="kicker" data-i18n="privacyPage.kicker">Documento legal</p>
+<h1 style="font-size:clamp(30px,4.6vw,42px)" data-i18n="privacyPage.h1">Política de privacidad</h1>
+<p class="meta" data-i18n="privacyPage.meta">Última actualización: 15 de agosto de 2026</p>
+<p class="lead" data-i18n="privacyPage.lead">Este documento describe cómo la aplicación EmuladorForEveryone trata la información. Está redactado en lenguaje claro y refleja el comportamiento previsto de la aplicación en el momento de su publicación. No constituye asesoría jurídica.</p>
 
 <div class="toc">
 <ol>
-<li><a href="#p1">Identificación del desarrollador</a></li>
-<li><a href="#p2">Nombre de la aplicación</a></li>
-<li><a href="#p3">Información de contacto</a></li>
-<li><a href="#p4">Qué información recopila</a></li>
-<li><a href="#p5">Qué información no recopila</a></li>
-<li><a href="#p6">Cómo se utilizan los datos</a></li>
-<li><a href="#p7">Datos compartidos con terceros</a></li>
-<li><a href="#p8">Almacenamiento local</a></li>
-<li><a href="#p9">Retención y eliminación</a></li>
-<li><a href="#p10">Seguridad</a></li>
-<li><a href="#p11">Cambios en la política</a></li>
-<li><a href="#p12">Contacto</a></li>
+<li><a href="#p1" data-i18n="privacyPage.toc1">Identificación del desarrollador</a></li>
+<li><a href="#p2" data-i18n="privacyPage.toc2">Nombre de la aplicación</a></li>
+<li><a href="#p3" data-i18n="privacyPage.toc3">Información de contacto</a></li>
+<li><a href="#p4" data-i18n="privacyPage.toc4">Qué información recopila</a></li>
+<li><a href="#p5" data-i18n="privacyPage.toc5">Qué información no recopila</a></li>
+<li><a href="#p6" data-i18n="privacyPage.toc6">Cómo se utilizan los datos</a></li>
+<li><a href="#p7" data-i18n="privacyPage.toc7">Datos compartidos con terceros</a></li>
+<li><a href="#p8" data-i18n="privacyPage.toc8">Almacenamiento local</a></li>
+<li><a href="#p9" data-i18n="privacyPage.toc9">Retención y eliminación</a></li>
+<li><a href="#p10" data-i18n="privacyPage.toc10">Seguridad</a></li>
+<li><a href="#p11" data-i18n="privacyPage.toc11">Cambios en la política</a></li>
+<li><a href="#p12" data-i18n="privacyPage.toc12">Contacto</a></li>
 </ol>
 </div>
 
-<h2 id="p1">1. Identificación del desarrollador</h2>
-<p>
+<h2 id="p1" data-i18n="privacyPage.h2_1">1. Identificación del desarrollador</h2>
+<p data-i18n="privacyPage.p1_1">
   EmuladorForEveryone es una aplicación desarrollada y distribuida por
-  <strong>moralesDev</strong>, desarrollador independiente (persona natural). 
+  <strong>moralesDev</strong>, desarrollador independiente (persona natural).
 </p>
 
 <ul>
-  <li><strong>Aplicación:</strong> EmuladorForEveryone</li>
-  <li><strong>Desarrollador:</strong> moralesDev</li>
-  <li><strong>Contacto de privacidad:</strong> alessadro_9@hotmail.com</li>
+  <li data-i18n="privacyPage.li1_1"><strong>Aplicación:</strong> EmuladorForEveryone</li>
+  <li data-i18n="privacyPage.li1_2"><strong>Desarrollador:</strong> moralesDev</li>
+  <li data-i18n="privacyPage.li1_3"><strong>Contacto de privacidad:</strong> alessadro_9@hotmail.com</li>
 </ul>
 
-<p>
+<p data-i18n="privacyPage.p1_2">
   Para consultas relacionadas con privacidad, tratamiento de datos o esta
   política, los usuarios pueden comunicarse mediante el correo electrónico
   indicado anteriormente.
 </p>
 
-<h2 id="p2">2. Nombre de la aplicación</h2>
-<p><strong>EmuladorForEveryone</strong>, aplicación para el sistema operativo Android, distribuida mediante Google Play.</p>
+<h2 id="p2" data-i18n="privacyPage.h2_2">2. Nombre de la aplicación</h2>
+<p data-i18n="privacyPage.p2"><strong>EmuladorForEveryone</strong>, aplicación para el sistema operativo Android, distribuida mediante Google Play.</p>
 
-<h2 id="p3">3. Información de contacto</h2>
-<p>Para cualquier consulta relacionada con esta política puedes escribir a alessadro_9@hotmail.com.</p>
+<h2 id="p3" data-i18n="privacyPage.h2_3">3. Información de contacto</h2>
+<p data-i18n="privacyPage.p3">Para cualquier consulta relacionada con esta política puedes escribir a alessadro_9@hotmail.com.</p>
 
-<h2 id="p4">4. Qué información recopila la aplicación</h2>
-<p>En su diseño actual, la aplicación <strong>no recopila datos personales</strong>. No dispone de servidores propios ni de un backend al que enviar información.</p>
-<p>La información que la aplicación maneja permanece en el dispositivo:</p>
+<h2 id="p4" data-i18n="privacyPage.h2_4">4. Qué información recopila la aplicación</h2>
+<p data-i18n="privacyPage.p4_1">En su diseño actual, la aplicación <strong>no recopila datos personales</strong>. No dispone de servidores propios ni de un backend al que enviar información.</p>
+<p data-i18n="privacyPage.p4_2">La información que la aplicación maneja permanece en el dispositivo:</p>
 <ul>
-<li>los archivos de juego que el usuario añade de forma voluntaria;</li>
-<li>las partidas guardadas y los estados de guardado generados durante el uso;</li>
-<li>las preferencias de la aplicación (controles, audio, imagen, idioma).</li>
+<li data-i18n="privacyPage.li4_1">los archivos de juego que el usuario añade de forma voluntaria;</li>
+<li data-i18n="privacyPage.li4_2">las partidas guardadas y los estados de guardado generados durante el uso;</li>
+<li data-i18n="privacyPage.li4_3">las preferencias de la aplicación (controles, audio, imagen, idioma).</li>
 </ul>
-<p>Ninguno de estos elementos se transmite al desarrollador.</p>
+<p data-i18n="privacyPage.p4_3">Ninguno de estos elementos se transmite al desarrollador.</p>
 
-<h2 id="p5">5. Qué información NO recopila</h2>
+<h2 id="p5" data-i18n="privacyPage.h2_5">5. Qué información NO recopila</h2>
 <ul>
-<li>No se crean cuentas de usuario ni se solicita registro.</li>
-<li>No se recopilan nombre, correo electrónico, teléfono ni dirección.</li>
-<li>No se recopila la ubicación del dispositivo.</li>
-<li>No se recopila la lista de aplicaciones instaladas ni los contactos.</li>
-<li>No se almacenan ROMs ni partidas en servidores del desarrollador.</li>
-<li>No se sincronizan partidas con la nube.</li>
-<li>No se muestra publicidad ni se utilizan identificadores publicitarios.</li>
-<li>No hay suscripciones ni compras dentro de la aplicación.</li>
+<li data-i18n="privacyPage.li5_1">No se crean cuentas de usuario ni se solicita registro.</li>
+<li data-i18n="privacyPage.li5_2">No se recopilan nombre, correo electrónico, teléfono ni dirección.</li>
+<li data-i18n="privacyPage.li5_3">No se recopila la ubicación del dispositivo.</li>
+<li data-i18n="privacyPage.li5_4">No se recopila la lista de aplicaciones instaladas ni los contactos.</li>
+<li data-i18n="privacyPage.li5_5">No se almacenan ROMs ni partidas en servidores del desarrollador.</li>
+<li data-i18n="privacyPage.li5_6">No se sincronizan partidas con la nube.</li>
+<li data-i18n="privacyPage.li5_7">No se muestra publicidad ni se utilizan identificadores publicitarios.</li>
+<li data-i18n="privacyPage.li5_8">No hay suscripciones ni compras dentro de la aplicación.</li>
 </ul>
-<p>La aplicación está prevista como una <strong>aplicación de pago único</strong> a través de Google Play. La transacción la gestiona Google Play conforme a sus propias políticas; el desarrollador no recibe ni almacena datos de pago.</p>
+<p data-i18n="privacyPage.p5">La aplicación está prevista como una <strong>aplicación de pago único</strong> a través de Google Play. La transacción la gestiona Google Play conforme a sus propias políticas; el desarrollador no recibe ni almacena datos de pago.</p>
 
-<h2 id="p6">6. Cómo se utilizan los datos</h2>
-<p>Los archivos y ajustes descritos en el punto 4 se utilizan exclusivamente para hacer funcionar la aplicación en el dispositivo: cargar el juego que el usuario seleccione, conservar su progreso y recordar sus preferencias. No se emplean con fines analíticos, publicitarios ni de perfilado.</p>
+<h2 id="p6" data-i18n="privacyPage.h2_6">6. Cómo se utilizan los datos</h2>
+<p data-i18n="privacyPage.p6">Los archivos y ajustes descritos en el punto 4 se utilizan exclusivamente para hacer funcionar la aplicación en el dispositivo: cargar el juego que el usuario seleccione, conservar su progreso y recordar sus preferencias. No se emplean con fines analíticos, publicitarios ni de perfilado.</p>
 
-<h2 id="p7">7. Si se comparten datos con terceros</h2>
-<p>La aplicación no comparte datos con terceros, porque no los recopila ni los transmite. No incorpora, en su diseño actual, Google Analytics, Firebase, Crashlytics, redes publicitarias ni otros SDK externos de analítica o monetización.</p>
-<p>Si en el futuro se incorpora alguno de esos servicios, esta política se actualizará <strong>antes o en el momento</strong> de publicar esa versión, indicando el servicio concreto, la información que trata y su finalidad. La distribución mediante Google Play implica, en todo caso, el tratamiento que Google realiza como plataforma de distribución, descrito en sus propias políticas.</p>
+<h2 id="p7" data-i18n="privacyPage.h2_7">7. Si se comparten datos con terceros</h2>
+<p data-i18n="privacyPage.p7_1">La aplicación no comparte datos con terceros, porque no los recopila ni los transmite. No incorpora, en su diseño actual, Google Analytics, Firebase, Crashlytics, redes publicitarias ni otros SDK externos de analítica o monetización.</p>
+<p data-i18n="privacyPage.p7_2">Si en el futuro se incorpora alguno de esos servicios, esta política se actualizará <strong>antes o en el momento</strong> de publicar esa versión, indicando el servicio concreto, la información que trata y su finalidad. La distribución mediante Google Play implica, en todo caso, el tratamiento que Google realiza como plataforma de distribución, descrito en sus propias políticas.</p>
 
-<h2 id="p8">8. Almacenamiento local</h2>
-<p>Todo el contenido de la aplicación se guarda en el almacenamiento del propio dispositivo: los archivos añadidos por el usuario, las partidas, los estados de guardado y la configuración. La aplicación solicita únicamente los permisos necesarios para leer los archivos que el usuario elija y para escribir sus partidas y ajustes.</p>
+<h2 id="p8" data-i18n="privacyPage.h2_8">8. Almacenamiento local</h2>
+<p data-i18n="privacyPage.p8">Todo el contenido de la aplicación se guarda en el almacenamiento del propio dispositivo: los archivos añadidos por el usuario, las partidas, los estados de guardado y la configuración. La aplicación solicita únicamente los permisos necesarios para leer los archivos que el usuario elija y para escribir sus partidas y ajustes.</p>
 
-<h2 id="p9">9. Retención y eliminación de datos</h2>
-<p>Los datos permanecen en el dispositivo mientras la aplicación esté instalada. El usuario puede eliminarlos en cualquier momento borrando los archivos desde la propia aplicación, borrando los datos de la aplicación desde los ajustes de Android o desinstalándola. Al desinstalar, los datos creados por la aplicación en su almacenamiento privado se eliminan; los archivos que el usuario haya guardado en carpetas públicas del dispositivo permanecen bajo su control.</p>
+<h2 id="p9" data-i18n="privacyPage.h2_9">9. Retención y eliminación de datos</h2>
+<p data-i18n="privacyPage.p9">Los datos permanecen en el dispositivo mientras la aplicación esté instalada. El usuario puede eliminarlos en cualquier momento borrando los archivos desde la propia aplicación, borrando los datos de la aplicación desde los ajustes de Android o desinstalándola. Al desinstalar, los datos creados por la aplicación en su almacenamiento privado se eliminan; los archivos que el usuario haya guardado en carpetas públicas del dispositivo permanecen bajo su control.</p>
 
-<h2 id="p10">10. Seguridad</h2>
-<p>Al no existir transmisión de datos a servidores del desarrollador, no hay información almacenada fuera del dispositivo. La aplicación se apoya en los mecanismos de aislamiento y permisos del sistema Android. Ningún sistema es completamente infalible, por lo que se recomienda mantener el dispositivo actualizado y protegido con bloqueo de pantalla.</p>
+<h2 id="p10" data-i18n="privacyPage.h2_10">10. Seguridad</h2>
+<p data-i18n="privacyPage.p10">Al no existir transmisión de datos a servidores del desarrollador, no hay información almacenada fuera del dispositivo. La aplicación se apoya en los mecanismos de aislamiento y permisos del sistema Android. Ningún sistema es completamente infalible, por lo que se recomienda mantener el dispositivo actualizado y protegido con bloqueo de pantalla.</p>
 
-<h2 id="p11">11. Cambios en la política</h2>
-<p>Esta política puede actualizarse cuando cambien las funciones de la aplicación o los requisitos legales aplicables. La versión vigente estará siempre disponible en esta página, con su fecha de última actualización. Los cambios relevantes se reflejarán también en la ficha de Google Play.</p>
+<h2 id="p11" data-i18n="privacyPage.h2_11">11. Cambios en la política</h2>
+<p data-i18n="privacyPage.p11">Esta política puede actualizarse cuando cambien las funciones de la aplicación o los requisitos legales aplicables. La versión vigente estará siempre disponible en esta página, con su fecha de última actualización. Los cambios relevantes se reflejarán también en la ficha de Google Play.</p>
 
-<h2 id="p12">12. Contacto</h2>
-<p>Dudas, solicitudes o avisos sobre privacidad: <a href="mailto:alessadro_9@hotmail.com">alessadro_9@hotmail.com</a>.</p>
+<h2 id="p12" data-i18n="privacyPage.h2_12">12. Contacto</h2>
+<p data-i18n="privacyPage.p12">Dudas, solicitudes o avisos sobre privacidad: <a href="mailto:alessadro_9@hotmail.com">alessadro_9@hotmail.com</a>.</p>
 </div>
 </main>
 <footer>
@@ -140,16 +145,16 @@
 <span class="mark"><i class="ph ph-game-controller" aria-hidden="true"></i></span>
 <strong style="font-weight:500">EmuladorForEveryone</strong>
 </div>
-<small>© 2026 moralesDev · Proyecto independiente de emulación para Android.</small>
+<small data-i18n="footer.copyright">© 2026 moralesDev · Proyecto independiente de emulación para Android.</small>
 </div>
-<nav class="foot-links" aria-label="Enlaces legales">
-<a href="privacy.html">Privacidad</a>
-<a href="terms.html">Términos</a>
-<a href="contact.html">Contacto</a>
-<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener">GitHub</a>
+<nav class="foot-links" data-i18n-aria="footer.aria" aria-label="Enlaces legales">
+<a href="privacy.html" data-i18n="nav.privacy">Privacidad</a>
+<a href="terms.html" data-i18n="nav.terms">Términos</a>
+<a href="contact.html" data-i18n="nav.contact">Contacto</a>
+<a href="https://github.com/moralesDev/emuladorForEveryone" rel="noopener" data-i18n="nav.github">GitHub</a>
 </nav>
 </div>
-<p class="disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo ni por ningún otro titular de derechos de propiedad intelectual. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
+<p class="disclaimer" data-i18n="footer.disclaimer">EmuladorForEveryone es un software de emulación independiente desarrollado por moralesDev. No está afiliado, patrocinado ni respaldado por Nintendo ni por ningún otro titular de derechos de propiedad intelectual. Game Boy Advance y las demás marcas mencionadas pertenecen a sus respectivos propietarios y se citan únicamente con fines descriptivos. La aplicación no distribuye ROMs, juegos, BIOS propietarias ni otros contenidos protegidos, y este sitio no proporciona enlaces para descargarlos. La responsabilidad de contar con los derechos o autorizaciones necesarios sobre los archivos utilizados corresponde al usuario.</p>
 </div>
 </footer>
 </body>
